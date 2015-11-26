@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Test</title>
+        <script src="jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" class="ui" href="http://oss.maxcdn.com/semantic-ui/2.1.6/semantic.min.css">
+        <script src="semantic.min.js"> </script>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="app.js"></script>
+    </head>
+
+    <body>
+        <div class="ui container">
+            <!--             页面头 -->
+            <div class="ui attached stackable menu">
+                <a class="item" href="#">
+                    <i class="home icon"></i>
+                    主页
+                </a>
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui icon input">
+                            <input name="" type="text" value="" placeholder="搜索中"/>
+                            <i class="search link icon"></i>
+                        </div>
+                    </div>
+                    <div class="ui dropdown item pointing link">
+                        current_user.name
+                    </div>
+                </div>
+            </div>
+
+            <!-- 创建事件 -->
+            <div class="event-create">
+                <div class="ui attached message">
+                    <div class="header">
+                        创建事件
+                    </div>
+                </div>
+                <form class="ui form attached segment" action="">
+                    <div class="field">
+                        <label for="title">标题</label>
+                        <div class="ui left labeled input">
+                            <input placeholder="请输入标题" name="title" type="text" value=""/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="title">描述</label>
+                        <div class="ui left labeled input">
+                            <textarea cols="30" id="" name="description" rows="3" placeholder="请输入描述"></textarea>
+                        </div>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label for="">活动日期</label>
+                            <input name="time" type="date" value="" placeholder="活动日期"/>
+                        </div>
+                        <div class="field">
+                            <label for="">截止日期</label>
+                            <input name="due_time" type="date" value=""/ placeholder="截止日期">
+                        </div>
+                    </div>
+                    <div class="ui submit black button">
+                        创建
+                    </div>
+                </form>
+            </div>
+
+            <!-- 事件列表 -->
+            <div id="events">
+                <div class="ui attached message">
+                    <div class="header">
+                        事件流
+                    </div>
+                </div>
+                <!-- items -->
+                <div class="ui items attached segment">
+                    <div class="event item" id="event-id">
+                        <!-- 左侧头像 -->
+                        <a class="ui tiny image" href="#">
+                            <img alt="title.user.avatar" src="http://semantic-ui.com/images/avatar2/large/patrick.png"/>
+                        </a>
+                        <!-- 中间部分 -->
+                        <div class="middle aligned content">
+                            <a class="header" href="">
+                                event.title
+                            </a>
+                            <div class="description">
+                                event.description
+                            </div>
+                            <!-- 操作按钮 -->
+                            <div class="extra">
+                                <div class="ui right floated button event-apply">参与</div>
+                                <div class="ui right floated button event-comment">评论{{event.comments.count}}</div>
+                            </div>
+                            <!-- 评论列表 -->
+                            <div class="ui comments transition hidden">
+                                <h4 class="ui dividing header">评论 -- $('.comments').hide().show()</h4>
+                                <!-- 单条评论内容 -->
+                                <div class="comment">
+                                    <!-- 评论头像 -->
+                                    <a class="avatar" href="">
+                                        <img alt="title.user.avatar" src="http://semantic-ui.com/images/avatar2/large/patrick.png"/>
+                                    </a>
+                                    <!-- 评论内容 -->
+                                    <div class="content">
+                                        <a class="author" href="">企鹅</a>
+                                        <div class="metadata">
+                                            <span class="date">今天下午 5:42</span>
+                                        </div>
+                                        <div class="text">
+                                            太赞了！
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 回复表单 -->
+                                <form class="ui reply form" action="">
+                                    <div class="field">
+                                        <textarea id="" name="" rows="2"></textarea>
+                                        <div class="ui blue labeled submit icon button"><i class="icon edit"></i> Add Reply </div>
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <a class="ui tiny image" href="#">
+                            <img alt="title.user.avatar" src="http://semantic-ui.com/images/avatar2/large/patrick.png"/>
+                        </a>
+                        <div class="middle aligned content">
+                            <a class="header" href="">
+                                event.title (这里的头像应为 title.user.avatar)
+                            </a>
+                            <div class="description">
+                                title.description
+                            </div>
+
+                            <div class="extra">
+                                <div class="ui right floated button">参与</div>
+                                <div class="ui right floated button">评论</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

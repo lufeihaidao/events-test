@@ -1,0 +1,10 @@
+body {
+    background-image: url(background.jpg);
+}
+.container {
+    width: 800px !important;
+}
+
+#events {
+    margin-top: 2rem;
+}
